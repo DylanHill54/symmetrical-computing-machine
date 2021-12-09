@@ -31,7 +31,7 @@ def createLotA(request):
 @api_view(['GET'])
 def getLotA(request):
     # Get method to get parking records
-    parking = LotA.objects.filter()
+    parking = LotA.objects.all()
     parking_serializer = LotASerializer(parking, many=True)
     return Response(parking_serializer.data)
 
